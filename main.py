@@ -27,7 +27,7 @@ MARKET_FILE = os.path.join(BASE_DIR, "market.json")
 SAVE_LOCK = asyncio.Lock()
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix="t!", intents=intents, help_command=None)
+bot = commands.Bot(command_prefix="%!", intents=intents, help_command=None)
 guild_settings = {}
 user_points = {}
 auto_replies = {}
@@ -206,7 +206,7 @@ async def on_ready():
         await bot.tree.sync()
     except Exception as e:
         print("SYNC ERROR", e)
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name="✨ /help - t! ile kullan"))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name="✨ /help - %! ile kullan"))
     print("Bot hazır:", bot.user)
 
 async def kurulum_logic(ctx, oyun: str, kanal: discord.TextChannel, sifirlamali: str):
@@ -1441,4 +1441,5 @@ if not TOKEN:
     print("HATA: DISCORD_TOKEN ortam değişkeni yok.")
 else:
     bot.run(TOKEN)
+
 
