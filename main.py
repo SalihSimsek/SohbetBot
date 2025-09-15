@@ -1197,22 +1197,22 @@ async def lider_cmd(ctx):
 async def credit(interaction: discord.Interaction):
     guild_name = interaction.guild.name if interaction.guild else "Bilinmeyen Sunucu"
     embed = discord.Embed(title="Bot Credit", color=discord.Color.blue())
-    embed.add_field(name="Bot İsmi", value="**ThunderBot**", inline=False)
+    embed.add_field(name="Bot İsmi", value="**Sohbet Botu**", inline=False)
     embed.add_field(name="Sunucu Adı", value=f"{guild_name}", inline=False)
     embed.add_field(name="Geliştiren Kişi", value="neighboth", inline=False)  # buraya senin ismin
     embed.add_field(name="Geliştirici Sunucu", value="[Discord Sunucusu](https://discord.gg/TWF9qc3576)", inline=False)
-    embed.add_field(name="Telif Hakkı", value="*© 2025 ThunderBot. Tüm hakları saklıdır.*", inline=False)
+    embed.add_field(name="Telif Hakkı", value="*© 2025 Sohbet Botu. Tüm hakları saklıdır.*", inline=False)
     await interaction.response.send_message(embed=embed)
 
 @bot.command(name="credit")
 async def credit_prefix(ctx):
     guild_name = ctx.guild.name if ctx.guild else "Bilinmeyen Sunucu"
     embed = discord.Embed(title="Bot Credit", color=discord.Color.blue())
-    embed.add_field(name="Bot İsmi", value="**ThunderBot**", inline=False)
+    embed.add_field(name="Bot İsmi", value="**Sohbet Botu**", inline=False)
     embed.add_field(name="Sunucu Adı", value=f"{guild_name}", inline=False)
     embed.add_field(name="Geliştiren Kişi", value="neighboth", inline=False)  # buraya senin ismin
     embed.add_field(name="Geliştirici Sunucu", value="[Discord Sunucusu](https://discord.gg/TWF9qc3576)", inline=False)
-    embed.add_field(name="Telif Hakkı", value="*© 2025 ThunderBot. Tüm hakları saklıdır.*", inline=False)
+    embed.add_field(name="Telif Hakkı", value="*© 2025 Sohbet Botu. Tüm hakları saklıdır.*", inline=False)
     await ctx.send(embed=embed)
 
 @bot.tree.command(name="ping", description="Botun pingini gösterir")
@@ -1441,3 +1441,4 @@ if not TOKEN:
     print("HATA: DISCORD_TOKEN ortam değişkeni yok.")
 else:
     bot.run(TOKEN)
+
